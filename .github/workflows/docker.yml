@@ -24,8 +24,8 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: |
-            hsanaeii/3x-ui
-            ghcr.io/mhsanaei/3x-ui
+            c80609a/3x-ui
+            ghcr.io/c80609a/3x-ui
           tags: |
             type=ref,event=branch
             type=ref,event=tag
@@ -57,6 +57,6 @@ jobs:
         with:
           context: .
           push: true
-          platforms: linux/amd64,linux/arm64/v8,linux/arm/v7,linux/arm/v6,linux/386
+          platforms: linux/amd64,linux/arm64/v8
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
